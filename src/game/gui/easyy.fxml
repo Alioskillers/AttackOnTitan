@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.gui.GameController">
+   <children>
+      <Pane fx:id="laneI" layoutX="177.0" layoutY="23.0" onMouseClicked="#handleLaneindex" prefHeight="78.0" prefWidth="1100.0" />
+      <Pane fx:id="laneIII" layoutX="180.0" layoutY="220.0" onMouseClicked="#handleLaneindex" prefHeight="100.0" prefWidth="1100.0" />
+      <Pane fx:id="laneII" layoutX="180.0" layoutY="110.0" onMouseClicked="#handleLaneindex" prefHeight="100.0" prefWidth="1100.0" />
+      <VBox fx:id="wallI" layoutX="105.0" prefHeight="100.0" prefWidth="55.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="55.0" layoutX="105.0" pickOnBounds="true">
+               <image>
+                  <Image url="@wall.jpeg" />
+               </image>
+            </ImageView>
+         </children></VBox>
+      <VBox fx:id="walIII" layoutX="105.0" layoutY="110.0" prefHeight="100.0" prefWidth="55.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="55.0" layoutX="105.0" layoutY="110.0" pickOnBounds="true">
+               <image>
+                  <Image url="@wall.jpeg" />
+               </image>
+            </ImageView>
+         </children></VBox>
+      <VBox fx:id="wallIII" layoutX="105.0" layoutY="220.0" prefHeight="100.0" prefWidth="55.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="55.0" layoutX="105.0" layoutY="220.0" pickOnBounds="true">
+               <image>
+                  <Image url="@wall.jpeg" />
+               </image>
+            </ImageView>
+         </children></VBox>
+      <Label fx:id="wallHealthI" layoutX="1.0" layoutY="11.0" prefHeight="35.0" prefWidth="107.0" text="Wall Health:" />
+      <Label fx:id="dangerLevelI" layoutX="1.0" layoutY="47.0" prefHeight="35.0" prefWidth="107.0" text="Danger Level:" />
+      <Label fx:id="wallHealthII" layoutX="1.0" layoutY="120.0" prefHeight="35.0" prefWidth="107.0" text="Wall Health:" />
+      <Label fx:id="dangerLevelII" layoutX="1.0" layoutY="160.0" prefHeight="35.0" prefWidth="107.0" text="Danger Level:" />
+      <Label fx:id="wallHealthIII" layoutX="1.0" layoutY="230.0" prefHeight="35.0" prefWidth="107.0" text="Wall Health:" />
+      <Label fx:id="dangerLevelIII" layoutX="1.0" layoutY="270.0" prefHeight="35.0" prefWidth="107.0" text="Danger Level:" />
+      <Button fx:id="buyPiercing" layoutY="450.0" mnemonicParsing="false" onAction="#handleBuyPiercingWeapon" prefHeight="120.0" prefWidth="170.0" text="Anti-TitanShell">
+         <font>
+            <Font size="19.7" />
+         </font></Button>
+      <Button fx:id="buySniper" layoutX="175.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleBuySniperWeapon" prefHeight="120.0" prefWidth="170.0" text="Long RangeSpear">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="buyVolley" layoutX="350.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleBuyVolleyWeapon" prefHeight="120.0" prefWidth="170.0" text="Wall SpreadCannon">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button fx:id="buyTrap" layoutX="525.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleBuyWallWeapon" prefHeight="120.0" prefWidth="170.0" text="Proximity Trap">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="passEasy" layoutX="700.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleEasyPassTurn" prefHeight="348.0" prefWidth="150.0" text="Pass Turn">
+         <font>
+            <Font size="25.0" />
+         </font></Button>
+      <Label fx:id="score" layoutX="870.0" layoutY="450.0" prefHeight="123.0" prefWidth="403.0" text="Score:">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <Label fx:id="turn" layoutX="870.0" layoutY="560.0" prefHeight="77.0" prefWidth="412.0" text="No. Of Turns:">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <Label fx:id="phase" layoutX="872.0" layoutY="646.0" prefHeight="48.0" prefWidth="408.0" text="Phase:">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <Label fx:id="resources" layoutX="870.0" layoutY="700.0" prefHeight="82.0" prefWidth="411.0" text="Resources:">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <TextArea editable="false" layoutY="570.0" prefHeight="230.0" prefWidth="170.0" text="Weapon Type:  Piercing-&#10;Cannon&#10;Price: 25&#10;Damage: 10&#10;&#10;" />
+      <TextArea editable="false" layoutX="175.0" layoutY="570.0" prefHeight="226.0" prefWidth="170.0" text="Weapon Type:  Sniper-&#10;Cannon&#10;Price: 25&#10;Damage: 35&#10;" />
+      <TextArea editable="false" layoutX="349.0" layoutY="570.0" prefHeight="230.0" prefWidth="170.0" text="Weapon Type: Volley-&#10;Spread Cannon&#10;Price: 100&#10;Damage: 5&#10;MinRange: 20&#10;MaxRange: 50&#10;" />
+      <TextArea editable="false" layoutX="525.0" layoutY="570.0" prefHeight="230.0" prefWidth="170.0" text="Weapon Type: Wall-&#10;Trap&#10;Price: 75&#10;Damage: 100" />
+      <ImageView fx:id="image" fitHeight="6.0" fitWidth="2.0" layoutX="1272.0" layoutY="786.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.gui.HardGameController">
+   <children>
+      <Pane fx:id="laneHardI" layoutX="180.0" layoutY="23.0" onMouseClicked="#handleHardLaneindex" prefHeight="78.0" prefWidth="1086.0" />
+      <Pane fx:id="laneHardIII" layoutX="180.0" layoutY="220.0" onMouseClicked="#handleHardLaneindex" prefHeight="100.0" prefWidth="1083.0" />
+      <Pane fx:id="laneHardII" layoutX="180.0" layoutY="110.0" onMouseClicked="#handleHardLaneindex" prefHeight="100.0" prefWidth="1087.0" />
+      <VBox fx:id="wallHardI" layoutX="105.0" prefHeight="100.0" prefWidth="55.0">
+         <children>
+            <ImageView fx:id="wallHard1" fitHeight="100.0" fitWidth="55.0" layoutX="105.0" onMouseClicked="#handleHardWallIndex" pickOnBounds="true">
+               <image>
+                  <Image url="@wall.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox fx:id="wallHardII" layoutX="105.0" layoutY="110.0" prefHeight="100.0" prefWidth="55.0">
+         <children>
+            <ImageView fx:id="wallHard2" fitHeight="100.0" fitWidth="55.0" layoutX="105.0" layoutY="110.0" onMouseClicked="#handleHardWallIndex" pickOnBounds="true">
+               <image>
+                  <Image url="@wall.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox fx:id="wallHardIII" layoutX="105.0" layoutY="220.0" prefHeight="100.0" prefWidth="55.0">
+         <children>
+            <ImageView fx:id="wallHard3" fitHeight="100.0" fitWidth="55.0" layoutX="105.0" layoutY="220.0" onMouseClicked="#handleHardWallIndex" pickOnBounds="true">
+               <image>
+                  <Image url="@wall.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Label fx:id="wallHardHealthI" layoutX="1.0" layoutY="11.0" prefHeight="35.0" prefWidth="106.0" text="Wall Health:" />
+      <Label fx:id="dangerHardLevelI" layoutX="1.0" layoutY="47.0" prefHeight="35.0" prefWidth="106.0" text="Danger Level:" />
+      <Label fx:id="wallHardHealthII" layoutX="1.0" layoutY="120.0" prefHeight="35.0" prefWidth="106.0" text="Wall Health:" />
+      <Label fx:id="dangerHardLevelII" layoutX="1.0" layoutY="160.0" prefHeight="35.0" prefWidth="106.0" text="Danger Level:" />
+      <Label fx:id="wallHardHealthIII" layoutX="1.0" layoutY="230.0" prefHeight="35.0" prefWidth="106.0" text="Wall Health:" />
+      <Label fx:id="dangerHardLevelIII" layoutX="1.0" layoutY="270.0" prefHeight="35.0" prefWidth="106.0" text="Danger Level:" />
+      <Button fx:id="buyHardPiercing" layoutY="549.0" mnemonicParsing="false" onAction="#handleHardBuyPiercingWeapon" prefHeight="80.0" prefWidth="170.0" text="Anti-TitanShell">
+         <font>
+            <Font size="19.7" />
+         </font>
+      </Button>
+      <Button fx:id="buyHardSniper" layoutX="175.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleHardBuySniperWeapon" prefHeight="80.0" prefWidth="170.0" text="Long RangeSpear">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="buyHardVolley" layoutX="350.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleHardBuyVolleyWeapon" prefHeight="80.0" prefWidth="170.0" text="Wall SpreadCannon">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="buyHardTrap" layoutX="525.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleHardBuyWallWeapon" prefHeight="80.0" prefWidth="170.0" text="Proximity Trap">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="passHard" layoutX="700.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleHardPassTurn" prefHeight="249.0" prefWidth="150.0" text="Pass Turn">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Label fx:id="score" layoutX="870.0" layoutY="557.0" prefHeight="60.0" prefWidth="403.0" text="Score:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="turn" layoutX="870.0" layoutY="619.0" prefHeight="57.0" prefWidth="412.0" text="No. Of Turns:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="phase" layoutX="872.0" layoutY="675.0" prefHeight="58.0" prefWidth="408.0" text="Phase:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="resources" layoutX="870.0" layoutY="727.0" prefHeight="55.0" prefWidth="411.0" text="Resources:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutY="631.0" prefHeight="170.0" prefWidth="170.0" text="Weapon Type:  Piercing-&#10;Cannon&#10;Price: 25&#10;Damage: 10&#10;&#10;" />
+      <TextArea editable="false" layoutX="175.0" layoutY="631.0" prefHeight="169.0" prefWidth="170.0" text="Weapon Type:  Sniper-&#10;Cannon&#10;Price: 25&#10;Damage: 35&#10;" />
+      <TextArea editable="false" layoutX="349.0" layoutY="631.0" prefHeight="169.0" prefWidth="170.0" text="Weapon Type: Volley-&#10;Spread Cannon&#10;Price: 100&#10;Damage: 5&#10;MinRange: 20&#10;MaxRange: 50&#10;" />
+      <TextArea editable="false" layoutX="525.0" layoutY="631.0" prefHeight="170.0" prefWidth="170.0" text="Weapon Type: Wall-&#10;Trap&#10;Price: 75&#10;Damage: 100" />
+      <Label fx:id="wallHardHealthIIII" layoutX="1.0" layoutY="344.0" prefHeight="35.0" prefWidth="106.0" text="Wall Health:" />
+      <Label fx:id="dangerHardLevelIIII" layoutX="1.0" layoutY="386.0" prefHeight="27.0" prefWidth="106.0" text="Danger Level:" />
+      <Label fx:id="wallHardHealthIIIII" layoutX="1.0" layoutY="450.0" prefHeight="35.0" prefWidth="106.0" text="Wall Health" />
+      <Label fx:id="dangerHardLevelIIIII" layoutX="1.0" layoutY="479.0" prefHeight="35.0" prefWidth="106.0" text="Danger Lavel:" />
+      <Pane fx:id="laneHardIIII" layoutX="180.0" layoutY="324.0" onMouseClicked="#handleHardLaneindex" prefHeight="100.0" prefWidth="1078.0" />
+      <Pane fx:id="laneHardIIIII" layoutX="190.0" layoutY="435.0" onMouseClicked="#handleHardLaneindex" prefHeight="100.0" prefWidth="1070.0" />
+      <VBox fx:id="wallHardIIII" layoutX="105.0" layoutY="330.0" prefHeight="100.0" prefWidth="55.0">
+         <children>
+            <ImageView fx:id="wallHard4" fitHeight="100.0" fitWidth="55.0" layoutX="105.0" layoutY="330.0" onMouseClicked="#handleHardWallIndex" pickOnBounds="true">
+               <image>
+                  <Image url="@wall.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox fx:id="wallHardIIIII" layoutX="105.0" layoutY="440.0" prefHeight="100.0" prefWidth="55.0">
+         <children>
+            <ImageView fx:id="wallHard5" fitHeight="100.0" fitWidth="55.0" layoutX="105.0" layoutY="440.0" onMouseClicked="#handleHardWallIndex" pickOnBounds="true">
+               <image>
+                  <Image url="@wall.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <ImageView fx:id="image" fitHeight="3.0" fitWidth="6.0" layoutX="1270.0" layoutY="790.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
